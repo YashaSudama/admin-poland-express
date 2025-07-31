@@ -1,0 +1,1002 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/Open-Sans/open-sans.eot");
+  src: url("../fonts/Open-Sans/open-sans.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+       url("../fonts/Open-Sans/open-sans.otf") format("opentype"), /* Open Type Font */
+       url("../fonts/Open-Sans/open-sans.svg") format("svg"), /* Legacy iOS */
+       url("../fonts/Open-Sans/open-sans.ttf") format("truetype"), /* Safari, Android, iOS */
+       url("../fonts/Open-Sans/open-sans.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/Open-Sans/open-sans.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	margin: 0;
+	font-size: 16px;
+	line-height: 1.35;
+	letter-spacing: 0.4px;
+	color: #555;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body,
+button,
+textarea {
+  	font-family: 'OpenSans'; 
+} 
+a {
+	text-decoration: none;
+	color: inherit;
+}
+h1 {
+  	font-size: 32px;
+}
+.day-of-travel-block .back i,
+.add-passenger-block .back i,
+.edit-passenger-block .back i,
+.day-of-travel-more-block .back i,
+.check-direction i,
+.add-passenger-block .phone .fa-plus,
+.add-passenger-block .add-operator-without-password .fa-plus,
+.add-passenger-block .add-operator-without-password-form i,
+.edit-passenger-block .phone .fa-plus,
+.edit-passenger-block .add-operator-without-password .fa-plus,
+.edit-passenger-block .add-operator-without-password-form i {
+	font-size: 30px;
+}
+h2  {
+  	font-size: 26px;
+}
+.day-of-travel-more-block .number-seats i {
+  	font-size: 24px;
+}
+.day-of-travel-more-block .edit-passenger i,
+#calendar .prev i,
+#calendar .next i {
+  	font-size: 20px;
+}
+h3,
+.day-of-travel-more-block .operator i,
+.day-of-travel-more-block .prepayment i,
+.select-wrapper::after,
+.message-content .close-btn,
+.day-of-travel-more-block .referal i {
+  	font-size: 18px;  
+}
+h4,
+.day-of-travel-more-block .phones-name i,
+textarea {
+  	font-size: inherit;  
+}
+.day-month,
+.day-of-travel-more-block .operator,
+.day-of-travel-more-block .prepayment,
+.day-of-travel-more-block button,
+.add-passenger-block #output-search-routes span,
+.edit-passenger-block #output-search-routes span,
+.day-of-travel-more-block .status-referal-block,
+.route-phone-name,
+.route-price {
+	font-size: 15px;
+}
+hr {
+	border: 0;
+	height: 1px;
+}
+.pos-rel {
+  	position: relative;
+}
+.pos-abs {
+  	position: absolute;
+}
+.pos-fixed {
+ 	position: fixed;
+}
+.width-fit {
+  	width: fit-content;
+}
+.width-min {
+  	width: min-content !important;
+}
+.d-block {
+  	display: block;
+}
+.d-inline-block {
+  	display: inline-block;
+}
+.d-flex {
+  	display: flex;
+}
+.d-none {
+  	display: none !important;
+}
+.m-auto {
+  	margin: auto !important;
+}
+.m-t-0 {
+  	margin-top: 0 !important;
+}
+.m-b-0 {
+  	margin-bottom: 0 !important;
+}
+.m-t-5 {
+  	margin-top: 5px;
+}
+.m-b-5 {
+  	margin-bottom: 5px !important;
+}
+.m-t-10 {
+  	margin-top: 10px;
+}
+.m-b-10 {
+  	margin-bottom: 10px !important;
+}
+.m-t-15 {
+  	margin-top: 15px;
+}
+.m-b-15 {
+  	margin-bottom: 15px;
+}
+.m-l-15 {
+  	margin-left: 15px;
+}
+.m-t-20 {
+  	margin-top: 20px;
+}
+.m-b-20 {
+  	margin-bottom: 20px !important;
+}
+.m-t-30 {
+  	margin-top: 30px !important;
+}
+.m-b-30 {
+  	margin-bottom: 30px !important;
+}
+.m-t-40 {
+  	margin-top: 40px !important;
+}
+.m-b-40 {
+  	margin-bottom: 40px !important;
+} 
+.m-t-50 {
+  	margin-top: 50px !important;
+}
+.m-b-50 {
+  	margin-bottom: 50px !important;
+}
+.p-all-0 {
+  	padding: 0 !important;
+}
+.p-b-5 {
+  	padding-bottom: 5px;
+}
+.p-t-30 {
+	padding-top: 30px;
+}
+.normal {
+  	font-weight: normal !important;
+}
+.bold {
+  	font-weight: bold;
+}
+.l-height-1 {
+  	line-height: 1;
+}
+.l-height-1-1 {
+  	line-height: 1.1;
+}
+.l-height-1-2 {
+  	line-height: 1.2;
+}
+.l-height-1-25 {
+  	line-height: 1.25;
+}
+.l-height-1-3 {
+  	line-height: 1.3;
+}
+.text-center {
+  	text-align: center;
+}
+.text-left {
+  	text-align: left;
+}
+.text-right {
+  	text-align: right;
+}
+.text-uppercase {
+  	text-transform: uppercase;
+}
+.text-capitalize {
+  	text-transform: capitalize;
+}
+.text-white {
+  	color: white;
+}
+input {
+	margin: 0;
+}
+input:focus {
+  	outline: none;
+}
+.container {
+  	max-width: 1000px;
+  	padding: 20px 12px;
+}
+.container:has(.day-of-travel-more-block) {
+	padding: 20px 8px;
+}
+.add-passenger-block .form-block-5:has(.add-operator-without-password-block) {
+	display: flex;
+}
+.calendar-content {
+	flex-wrap: wrap;
+}
+.calendar-top,
+.day-of-travel-block .top-block,
+.day-of-travel-more-block .top-block,
+.day-of-travel-more-block .passenger .number-seats,
+.day-of-travel-more-block .info-operator,
+.add-passenger-block .top-block,
+.add-passenger-block .number-of-seats,
+.add-passenger-block .phone,
+.edit-passenger-block .top-block,
+.edit-passenger-block .number-of-seats,
+.edit-passenger-block .phone,
+header,
+.menu ul,
+.day-of-travel-more-block-1,
+.add-passenger-block .form-block-5:has(.add-operator-without-password-block) {
+	align-items: center;
+}
+.day-of-travel-block .content .passengers,
+.day-of-travel-block .content .parcels,
+.price-container {
+	align-items: flex-end;
+}
+header,
+.calendar-top,
+.calendar-middle,
+.day-of-travel-block .info-day-of-travel,
+.add-passenger-block .form-block-2,
+.add-passenger-block .phone,
+.edit-passenger-block .form-block-2,
+.edit-passenger-block .phone,
+.price-container,
+.day-of-travel-more-block-1,
+.add-passenger-block .form-block-5:has(.add-operator-without-password-block),
+.edit-passenger-block .button-container {
+	justify-content: space-between;
+}
+.calendar-top title,
+.calendar-content,
+.registration-block .password i,
+.autorisation-block .password i,
+.add-passenger-block .phone {
+	transition: opacity 0.2s linear;
+}
+.message-content,
+.calendar-content li,
+.day-of-travel-block .content .to-poland-day-of-travel,
+.day-of-travel-block .content .from-poland-day-of-travel,
+.check-direction div,
+.add-passenger-block .add-operator-without-password-form div,
+.day-of-travel-more-block button,
+.day-of-travel-more-block .passenger,
+.day-of-travel-more-block .operator,
+.day-of-travel-more-block .prepayment,
+.add-passenger-block #output-search-routes,
+.add-passenger-block button,
+.edit-passenger-block #output-search-routes,
+.edit-passenger-block button,
+.registration-block button,
+.add-passenger-block textarea,
+.add-passenger-block select,
+.edit-passenger-block textarea,
+.edit-passenger-block select,
+.autorisation-block button,
+.mailing-block button,
+.mailing-block textarea,
+.edit-passenger-block .status-booking-block,
+.edit-passenger-block .first-received,
+.edit-passenger-block .then-given {
+    border-radius: 6px;
+}
+.calendar-content li {
+    border-radius: 3px;
+}
+.now-date .day-month,
+.add-passenger-block .phone .fa-minus,
+.edit-passenger-block .phone .fa-minus,
+.day-of-travel-more-block .status-referal-block,
+.day-of-travel-more-block .canceled-booking {
+	color: #e41717;
+}
+.success,
+.edit-passenger-block .status-booking-block:has(.our-booking) {
+    background-color: #a6d8c0;
+}
+.error,
+.edit-passenger-block .canceled-booking span {
+    color: #811e1e;
+}
+.success,
+.day-of-travel-more-block .prepayment i,
+.edit-passenger-block .status-booking-block:has(.our-booking) {
+	color: #28a745;
+}
+.day-of-travel-more-block .passenger.canceled,
+.error,
+.edit-passenger-block .status-booking-block:has(.canceled-booking) {
+    background-color: #e4b8bc !important;
+}
+.day-of-travel-block .content .info-day-of-travel,
+.day-of-travel-more-block .content .prepayment {
+	background-color: #f8eeba;
+}
+.day-of-travel-block .content h3,
+.day-of-travel-more-block .passenger {
+	background-color: #dedede;
+}
+.day-of-travel-more-block button,
+.add-passenger-block button,
+.edit-passenger-block button,
+.registration-block button,
+.autorisation-block button,
+.mailing-block button {
+	background-color: #5ec1ff;
+}
+.info,
+.current-month:has(.to-poland),
+.current-month:has(.from-poland),
+.day-of-travel-more-block .referal .received,
+.edit-passenger-block .status-booking-block:has(.received),
+.edit-passenger-block .first-received {
+	background-color: #b6d6ea;
+}
+.day-of-travel-more-block .referal .given,
+.edit-passenger-block .status-booking-block:has(.given),
+.edit-passenger-block .then-given {
+	background-color: #e8c5fc;
+}
+.edit-passenger-block .canceled-booking button,
+.edit-passenger-block .button-container .canceled-booking {
+	background-color: #e41717;
+}
+.info,
+.day-of-travel-more-block .back i,
+.day-of-travel-block .back i,
+.add-passenger-block .back i,
+.edit-passenger-block .back i,
+.check-direction i,
+.add-passenger-block .add-operator-without-password-form i,
+.menu ul li,
+.day-of-travel-block .referals i,
+.day-of-travel-more-block .phones-name i,
+.day-of-travel-more-block .operator i,
+.registration-block .password i,
+.autorisation-block .password i,
+.day-of-travel-more-block .edit-passenger i,
+.edit-passenger-block .status-booking-block:has(.received),
+.edit-passenger-block .first-received {
+    color: #2d90ce;
+}
+.edit-passenger-block .status-booking-block:has(.given),
+.edit-passenger-block .then-given {
+    color: #9715e2;
+}
+.info-day-of-travel .passengers i,
+.day-of-travel-more-block .fa-user-alt,
+.add-passenger-link i {
+    color: #f1ad7e;
+}
+.info-day-of-travel .parcels i,
+.day-of-travel-more-block .fa-cube {
+	color: #be8233;
+}
+.day-of-travel-block .referals .received {
+	margin-right: 15px;
+}
+.day-of-travel-block .referals .received i,
+.day-of-travel-more-block .operator i {
+    left: 1px;
+}
+.day-of-travel-block .referals .received i,
+.day-of-travel-more-block .received i {
+	transform: rotate(136deg);
+}
+.day-of-travel-block .referals .given i {
+    top: 7px;
+    left: 3px;
+}
+.day-of-travel-block .referals .given i,
+.day-of-travel-more-block .given i {
+    transform: rotate(-46deg);
+}
+.check-direction,
+.message-content,
+.day-of-travel-more-block .save-referal,
+.add-passenger-block .add-operator-without-password-form {
+	opacity: 0;
+}
+.prev-month,
+.next-month {
+	opacity: 0.3;
+}
+#calendar .prev,
+#calendar .next,
+.current-month,
+.add-passenger-link-block,
+.day-of-travel-more-block .confirm-referal-block label,
+.day-of-travel-more-block .confirm-referal-block input,
+.day-of-travel-more-block button,
+.add-passenger-block button,
+.add-passenger-block .number-of-seats,
+.add-passenger-block .phone i,
+.edit-passenger-block button,
+.edit-passenger-block .number-of-seats,
+.edit-passenger-block .phone i,
+.message-content .close-btn,
+.registration-block button,
+.autorisation-block button,
+#output-search-routes .route-item,
+.mailing-block button,
+.add-passenger-block .add-operator-without-password .fa-plus {
+  	cursor: pointer;
+}
+.check-direction,
+.add-passenger-block .add-operator-without-password-form,
+.day-of-travel-more-block .confirm-referal-block button,
+.day-of-travel-more-block .confirm-referal-block,
+.add-passenger-block button,
+.edit-passenger-block button,
+.registration-block button,
+.autorisation-block button,
+.mailing-block button {
+	transition: opacity .5s linear; 
+}
+#calendar,
+.add-passenger-block form,
+.edit-passenger-block form,
+.edit-passenger-block .status-booking-block,
+.registration-block form,
+.autorisation-block form,
+.mailing-block form,
+.users-block {
+	max-width: 600px;
+}
+.calendar-middle {
+	padding: 0 12px;
+}
+.calendar-content li {
+	width: 12.6%;
+    margin: 0.5% 0.5%;
+	padding: 12px 0;
+	border: 1px solid #333;
+}
+#messages-container {
+    left: 50%;
+    bottom: 0;
+    padding: 25px 10px;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none;
+}
+.message-content {
+	width: 300px;
+    padding: 10px 14px;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(100px);
+    transition: opacity 0.5s ease, transform 0.5s ease 0.25s;
+    pointer-events: auto;
+}
+.message-content.show {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+.message-content .close-btn {
+    top: -12px;
+    right: -10px;
+    background: none;
+    border: none;
+    color: inherit;
+}
+.current-month:has(.to-poland),
+.current-month:has(.from-poland) {
+	padding: 6px 0 2px !important;
+}
+.current-month:has(.to-poland) .day-month,
+.current-month:has(.from-poland) .day-month {
+	display: block;
+	margin-bottom: -4px;
+}
+#calendar .to-poland,
+#calendar .from-poland {
+	font-size: 12px;
+}
+.day-of-travel-block .content .passengers {
+	margin-right: 20px;
+}
+.day-of-travel-block .content .passengers i,
+.day-of-travel-block .content .parcels i,
+.day-of-travel-more-block .content .fa-user-alt,
+.day-of-travel-more-block .operator i,
+.day-of-travel-more-block .prepayment i {
+	margin-right: 5px;
+}
+.day-of-travel-block .content i,
+.add-passenger-block .phone .fa-minus,
+.edit-passenger-block .phone .fa-minus {
+	font-size: 22px;
+}
+.day-of-travel-more-block .phones-name .with-phone {
+    transform: rotate(10deg);
+}
+.day-of-travel-more-block .phones-name .without-phone {
+    transform: rotate(100deg);
+}
+.day-of-travel-block .content .info-day-of-travel,
+.day-of-travel-block .content h3 a {
+	padding: 15px;
+}
+.day-of-travel-more-block .content .passenger {
+	padding: 15px 8px;
+}
+.day-of-travel-more-block .content .passenger
+.day-of-travel-block .content h3,
+.day-of-travel-more-block .route-phone-name h4 {
+	margin: 0;
+}
+.day-of-travel-more-block .phone {
+	margin-right: 10px;
+}
+.to-poland-day-of-travel + .from-poland-day-of-travel {
+    margin-top: 40px;
+}
+.to-poland-day-of-travel.d-none + .from-poland-day-of-travel {
+    margin-top: 0;
+}
+.add-passenger-link-block {
+	bottom: 30px;
+    right: 30px;
+    padding: 16px 15px;
+    border-radius: 50%;
+	background-color: #ffffffad;
+    box-shadow: 0 4px 30px -11px #000;
+	z-index: 1;
+}
+.add-passenger-link i,
+.menu ul li i {
+    font-size: 22px;
+}
+.check-direction,
+.add-passenger-block .add-operator-without-password-form {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #0000005c;
+	z-index: -1;
+}
+.check-direction div,
+.add-passenger-block .add-operator-without-password-form div {
+	max-width: 450px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.check-direction div {
+	width: 50%;
+	padding: 10px 0;
+}
+.add-passenger-block .add-operator-without-password-form div {
+	width: 90%;
+	padding: 40px 20px;
+}
+.check-direction div h3 {
+	margin: 0;
+}
+.check-direction div .to-poland {
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.check-direction div .from-poland {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.check-direction i,
+.add-passenger-block .add-operator-without-password-form i {
+	top: 20px;
+    right: 20px;
+}
+.logo img {
+	width: 100%;
+}
+.menu ul li {
+    padding: 0 8px;
+}
+.menu ul li:first-child {
+	padding-left: 0;
+}
+.menu ul li:last-child {
+	padding-right: 0;
+}
+.menu ul li .login {
+	max-width: 120px;
+    font-size: 14px;
+}
+.day-of-travel-more-block .operator,
+.day-of-travel-more-block .prepayment {
+	padding: 8px;
+}
+.day-of-travel-more-block-2:has(.referal) .prepayment {
+	margin-left: 10px;
+}
+.day-of-travel-more-block .operator i {
+	left: -2px;
+}
+.day-of-travel-more-block .operator input {
+	top: 2px;
+}
+.day-of-travel-more-block .prepayment {
+	max-width: 150px;
+}
+.day-of-travel-more-block .prepayment i {
+	top: 10px;
+}
+.day-of-travel-more-block button,
+.add-passenger-block button,
+.edit-passenger-block button,
+.registration-block button,
+.autorisation-block button,
+.mailing-block button {
+    padding: 8px 20px;
+    border: 0px;
+    color: #f8eeba;
+}
+.day-of-travel-more-block button[disabled],
+.add-passenger-block button[disabled],
+.edit-passenger-block button[disabled],
+.registration-block button[disabled],
+.autorisation-block button[disabled],
+.mailing-block button[disabled] {
+	opacity: 0.5 !important;
+	cursor: not-allowed;
+}
+.add-passenger-block button,
+.edit-passenger-block button,
+.registration-block button,
+.autorisation-block button,
+.mailing-block button {
+	width: 50%;
+	min-width: 200px;
+	max-width: 300px;
+	font-size: inherit;
+}
+.add-passenger-block #add-route,
+.edit-passenger-block #add-route {
+	min-width: 150px;
+	padding: 6px;
+}
+.add-passenger-block .content form input:not(#number-of-seats):not(#passenger):not(#parcel):not(#without-phone),
+.add-passenger-block .content form textarea,
+.add-passenger-block .content form select,
+.edit-passenger-block .content form input:not(#number-of-seats):not(#passenger):not(#parcel):not(#without-phone),
+.edit-passenger-block .content form textarea,
+.edit-passenger-block .content form select,
+.registration-block input:not([type="radio"]),
+.autorisation-block input,
+.mailing-block textarea {
+	width: 100%;
+    padding: 10px;
+}
+.add-passenger-block .content form input:focus:not(#passenger):not(#parcel):not(#without-phone),
+.registration-block input:focus,
+.autorisation-block input:focus {
+	border-bottom: 1px solid #e8c5fc;
+}
+.add-passenger-block .content .form-block-1 input,
+.add-passenger-block .content .form-block-3 input,
+.add-passenger-block .content .form-block-4 input,
+.add-passenger-block .content .form-block-5 input,
+.edit-passenger-block .content .form-block-1 input,
+.edit-passenger-block .content .form-block-3 input,
+.edit-passenger-block .content .form-block-4 input,
+.edit-passenger-block .content .form-block-5 input,
+.registration-block input,
+.autorisation-block input {
+	border: 0;
+	border-bottom: 1px solid #555;
+}
+.add-passenger-block #output-search-routes,
+.edit-passenger-block #output-search-routes {
+	width: 100%;
+	height: auto;
+	top: 40px;
+    max-height: 400px;
+    overflow-y: scroll;
+    background-color: #ffffff;
+    box-shadow: 0 2px 15px -5px #000;
+}
+.add-passenger-block #output-search-routes span,
+.edit-passenger-block #output-search-routes span  {
+	padding: 12px 0;
+}
+.add-passenger-block #output-search-routes .route-item,
+.edit-passenger-block #output-search-routes .route-item {
+    border-bottom: 1px solid #dcdcdc;
+}
+.add-passenger-block #output-search-routes .route-item:last-child,
+.edit-passenger-block #output-search-routes .route-item:last-child {
+    border-bottom: 0;
+}
+.add-passenger-block #output-search-routes:has(span),
+.edit-passenger-block #output-search-routes:has(span) {
+	padding: 15px;
+}
+.add-passenger-block #output-search-routes:has(span + span),
+.edit-passenger-block #output-search-routes:has(span + span) {
+	padding: 15px 15px 0;
+}
+.add-passenger-block .content form input:not(#number-of-seats):not(#passenger):not(#parcel):not(#without-phone),
+.add-passenger-block .content form textarea,
+.add-passenger-block .content form select,
+.add-passenger-block #output-search-routes,
+.add-passenger-block .number-of-seats span,
+.edit-passenger-block .content form input:not(#number-of-seats):not(#passenger):not(#parcel):not(#without-phone),
+.edit-passenger-block .content form textarea,
+.edit-passenger-block .content form select,
+.edit-passenger-block #output-search-routes,
+.edit-passenger-block .number-of-seats span,
+.registration-block input,
+.autorisation-block input,
+.mailing-block textarea,
+.add-passenger-block .add-operator-without-password-form div,
+.edit-passenger-block .status-booking-block,
+.message-content,
+.edit-passenger-block .first-received,
+.edit-passenger-block .then-given {
+    box-sizing: border-box;
+}
+.add-passenger-block .content form input,
+.add-passenger-block .content form textarea,
+.add-passenger-block .content form select,
+.edit-passenger-block .content form input,
+.edit-passenger-block .content form textarea,
+.edit-passenger-block .content form select,
+.registration-block input,
+.autorisation-block input,
+.mailing-block textarea {
+	font-size: 16px;
+}
+.add-passenger-block .number-of-seats input,
+.add-passenger-block .number-of-seats span,
+.edit-passenger-block .number-of-seats input,
+.edit-passenger-block .number-of-seats span  {
+	border: 1px solid #555;
+}
+.add-passenger-block .number-of-seats span,
+.edit-passenger-block .number-of-seats span {
+	padding: 10.7px 14.8px;
+	background-color: #dcdcdc;
+}
+.add-passenger-block .number-of-seats .minus,
+.edit-passenger-block .number-of-seats .minus {
+	border-right: 0;
+	border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.add-passenger-block .number-of-seats .plus,
+.edit-passenger-block .number-of-seats .plus {
+	border-left: 0;
+	border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.add-passenger-block .number-of-seats input,
+.edit-passenger-block .number-of-seats input {
+	width: 45px !important;
+    height: 44.5px;
+	border-left: 0;
+	border-right: 0;
+	padding-left: 18px !important;
+    padding-right: 0 !important;
+}
+.add-passenger-block .number-of-seats input:focus,
+.add-passenger-block .content form textarea:focus,
+.add-passenger-block .content form select:focus,
+.edit-passenger-block .number-of-seats input:focus,
+.edit-passenger-block .content form textarea:focus,
+.edit-passenger-block .content form select:focus,
+.mailing-block textarea:focus {
+	outline: none;
+	border: 1px solid #e8c5fc;
+}
+.add-passenger-block .price-container input,
+.edit-passenger-block .price-container input {
+	width: 50% !important;
+}
+.add-passenger-block .phone input,
+.edit-passenger-block .phone input {
+	width: 85% !important;
+}
+.add-passenger-block .content form textarea,
+.edit-passenger-block .content form textarea {
+	min-height: 75px;
+}
+.mailing-block textarea {
+	min-height: 150px;
+}
+.add-passenger-block select,
+.edit-passenger-block select {
+	appearance: none;
+}
+.select-wrapper::after {
+	content: '\f107';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+}
+.autorisation-block {
+	top: 50%;
+    transform: translateY(-50%);
+    width: 92%;
+}
+.registration-block .admin-roles {
+	padding: 10px;
+}
+.registration-block .password i,
+.autorisation-block .password i {
+	top: 5px;
+    right: 10px;
+    padding: 5px;
+    z-index: 1;
+}
+.error-form {
+	border: 1px solid #e41717 !important;
+}
+.users-block table {
+	width: 100%;
+    border-collapse: collapse;
+}
+.users-block table th,
+.users-block table td {
+	border: 1px solid #dcdcdc;
+}
+.users-block table th {
+    padding: 10px;
+	background-color: #dcdcdc;
+    text-align: left;
+}
+.users-block table td {
+    padding: 15px 10px;
+}
+.day-of-travel-more-block .amount-word {
+	font-size: 14px;
+}
+.day-of-travel-block h3 {
+	margin-bottom: 5px;
+}
+.day-of-travel-more-block .edit-passenger {
+	bottom: 6px;
+	right: 2px;
+	padding: 10px;
+} 
+.edit-passenger-block .status-booking-block,
+.edit-passenger-block .first-received,
+.edit-passenger-block .then-given {
+	padding: 10px;
+}
+.edit-passenger-block .status-booking-block:has(.first-received),
+.edit-passenger-block .status-booking-block:has(.then-given) {
+	padding: 0;
+}
+.edit-passenger-block .canceled-booking span {
+	margin-right: 10px;
+}
+.edit-passenger-block .canceled-booking button {
+	width: auto;
+	min-width: 155px;
+	padding: 10px;
+}
+#calendar .prev,
+#calendar .next {
+	padding: 5px;
+}
+.edit-passenger-block .button-container button {
+	width: 40%;
+	min-width: 155px;
+}
+.day-of-travel-more-block .number-seats {
+	margin-right: 15px;
+}
+.day-of-travel-more-block .route-price {
+	margin-left: 15px;
+}
+
+@media (min-width: 381px) {
+
+	.calendar-content li {
+		width: 12.7%;
+	}
+
+}
+
+@media (min-width: 451px) {
+
+	.calendar-middle {
+		padding: 0 20px;
+	}
+	.calendar-content li {
+		width: 12.8%;
+		padding: 16px 0;
+	}
+	.current-month:has(.to-poland),
+	.current-month:has(.from-poland) {
+		padding: 12px 0 2px !important;
+	}
+	.current-month:has(.to-poland) .day-month,
+	.current-month:has(.from-poland) .day-month {
+		margin-bottom: -2px;
+	}
+
+}
+
+@media (min-width: 558px) {
+
+	.calendar-middle {
+		padding: 0 30px;
+	}
+	.calendar-content li {
+		width: 12.9%;
+		padding: 23px 0;
+	}
+	.day-month {
+		font-size: 18px;
+	}
+	.current-month:has(.to-poland),
+	.current-month:has(.from-poland) {
+		padding: 18px 0 2px !important;
+	}
+	.current-month:has(.to-poland) .day-month,
+	.current-month:has(.from-poland) .day-month {
+		margin-bottom: 0;
+	}
+	#calendar .to-poland, 
+	#calendar .from-poland {
+		font-size: 13px;
+	}
+
+}
+
+@media (max-width: 768px) {
+
+	.logo {
+		max-width: 75px;
+	}
+	.logo-desctop {
+		display: none;
+	}
+
+}
+
+@media (min-width: 769px) {
+	
+	.logo {
+		max-width: 100px;
+	}
+	.logo-mobile {
+		display: none;
+	}
+
+}
