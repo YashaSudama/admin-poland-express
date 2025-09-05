@@ -19,14 +19,20 @@ function mailingFunc(event, elem) {
         
         if (data.result) {
             let objMessage = objectStatuses[data.result.response_code],
-                result = data.result;
+                result = data.result;   
 
-            console.log(result);
-            
-            messageOutput(objMessage.responseDescription, objMessage.status);
+            if (result.response_result && result.response_result.length > 0) {
 
-            if (result.response_result) {
-                console.log('Hari');
+                result.response_result.map(item => {
+                    let objResult = objectStatuses[item.response_code];
+
+                    messageOutput('<span style="display: block; margin-bottom: 5px;">Номер - ' + item.phone + '</span>' + 
+                                  objResult.responseDescription, objResult.status);
+
+                });
+
+            } else {
+                messageOutput(objMessage.responseDescription, objMessage.status);
             }
 
         } else if (data.novalidate) {

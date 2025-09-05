@@ -46,7 +46,7 @@ function addOrEditPassengerFunc(event, elem) {
 
     const jsonData = formDataToJson(formData);
     
-    fetch('/App/Api.php?class=Passengers&method=' + method, {
+    fetch('/App/Api.php?class=Passengers&method=' + method, { 
         method: 'POST',
         body: JSON.stringify(jsonData)
     })

@@ -288,7 +288,7 @@
 
                             </div>
                             <input hidden name="role-admin-id" value="<?= $booking['admin_role_name']; ?>">
-                            <input hidden name="referal-id" value="<?= $booking['referal_id']; ?>">
+                            <input hidden name="referal-id" value="<?= $booking['referal_id'] ?? $booking['admin_id']; ?>">
                             <input hidden name="status-referal" value="<?= $booking['status_referal']; ?>">
                         </form>
                     </div>

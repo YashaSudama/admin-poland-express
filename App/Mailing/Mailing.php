@@ -42,7 +42,8 @@ class Mailing
                     p.phones,
                     p.name
 
-                FROM `" . self::$prefixDB . self::$tablePassengers . "` AS p
+                FROM `" . self::$prefixDB . self::$tablePassengers . "` AS p 
+                WHERE p.phones IS NOT NULL
 
             ";
 
@@ -61,7 +62,7 @@ class Mailing
                     }
 
                     $rawPhones = $row['phones'];
-                    $splitPhones = preg_split('/[\s,]+/', $rawPhones);
+                    $splitPhones = preg_split('/[,]+/', $rawPhones);
 
                     foreach ($splitPhones as $phone) {
                         $cleanPhone = preg_replace('/\D+/', '', $phone);
@@ -81,9 +82,9 @@ class Mailing
                 $token = $_ENV['TURBO_SMS_TOKEN'];
                 $method = 'send.json';
                 $postField = [
-                    // 'recipients' => $phones,
+                    'recipients' => $phones,
                     // 'recipients' => ['380503684399'],
-                    'recipients' => ['380989198541'],
+                    // 'recipients' => ['380989198541','380502401365'],
                     'sms' => [
                         'sender' => $_ENV['TURBO_SMS_SENDER'],
                         'text' => $textMailing
