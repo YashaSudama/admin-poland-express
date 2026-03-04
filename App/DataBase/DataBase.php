@@ -21,7 +21,6 @@ class DataBase
         $this->createTableAdmins();
         $this->createTableRoutes();
         $this->createTablePassengers();
-        $this->insertTableRoutes();
         $this->insertTableRoleAdmins();
         self::$conn->close();
     }
@@ -111,7 +110,6 @@ class DataBase
         }
 
     }
-
     private function createTableRoleAdmins() {
         $this->tableRolesAdmins = $this->prefixDB . $_ENV['DB_TABLE_ROLES_ADMINS'];
         self::$conn->select_db(self::$nameDB);
@@ -160,51 +158,6 @@ class DataBase
         }
 
     }
-
-    private function insertTableRoutes() {
-        $routes = array_unique(Configurations::getListRoutes());
-        $result = self::$conn->query("SELECT id, route_name FROM `$this->tableRoutes` ORDER BY id");
-
-        if ($result->num_rows) {
-            $currentRoutes = [];
-
-            while ($row = $result->fetch_assoc()) {
-                $currentRoutes[$row['id']] = $row['route_name'];
-            }
-
-            $currentRouteNames = array_values($currentRoutes);
-            $insertRoute = self::$conn->prepare("INSERT IGNORE INTO `$this->tableRoutes` (route_name) VALUES (?)");
-
-            foreach ($routes as $route) {
-
-                if (!in_array($route, $currentRouteNames)) {
-                    $insertRoute->bind_param("s", $route);
-                    $result = $insertRoute->execute();
-                    $type = $result ? 'success' : 'error';
-                    $message = $result ? 'Маршрут <b>' . $route . '</b> успешно добавлен!' : 'Маршрут <b>' . $route . '</b> добавить не удалось!';
-                    Configurations::messageOutput($message, $type);
-                }
-
-            }
-
-            $insertRoute->close();
-
-        } else {
-            $insertRoute = self::$conn->prepare("INSERT IGNORE INTO $this->tableRoutes (route_name) VALUES (?)");
-
-            foreach ($routes as $route) {
-                $insertRoute->bind_param("s", $route);
-                $result = $insertRoute->execute();
-                $type = $result ? 'success' : 'error';
-                $message = $result ? 'Маршрут <b>' . $route . '</b> успешно добавлен!' : 'Маршрут <b>' . $route . '</b> добавить не удалось!';
-                Configurations::messageOutput($message, $type);
-            }
-
-            $insertRoute->close();
-        }
-
-    }
-
     private function insertTableRoleAdmins() {
 
         if ($this->tableExists($this->tableRolesAdmins)) {
@@ -235,7 +188,6 @@ class DataBase
         }
 
     }
-
     private function messageCreateTable($tableName, $result) {
         $type = $result ? 'success' : 'error';
         $message = sprintf(

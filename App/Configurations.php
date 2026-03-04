@@ -70,22 +70,6 @@ class Configurations
         $dotEnv->load();
     }
 
-    public static function getListRoutes() {
-
-        $rules = Rules::fromPath(
-            'https://publicsuffix.org/list/public_suffix_list.dat'
-        );
-        
-        $json = file_get_contents('https://' . $rules->resolve($_SERVER['HTTP_HOST'])->registrableDomain()->toString() . '/tab.json');
-
-        if (!$json) {
-            return self::messageOutput(self::$messages['Configurations'][0], 'error');
-        }
-
-        return json_decode($json, true);
-
-    }
-
     public static function messageOutput($message, $type) { ?>
     
         <script class="script-message-output">
