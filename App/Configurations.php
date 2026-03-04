@@ -201,13 +201,13 @@ class Configurations
         $month = isset($_GET['month']) ? (int)$_GET['month'] : null;
         $year  = isset($_GET['year'])  ? (int)$_GET['year']  : null;
 
-        if ($day && $month && $year) {
+        if ($day && $month !== null && $year) {
             $monthLocal = $month + 1;
             $timezone = new \DateTimeZone('Europe/Kiev');
             $date = new \DateTime("$year-$monthLocal-$day", $timezone);
 
             $formatter = new \IntlDateFormatter(
-                'ru_RU',                  // или 'uk_UA' если нужен украинский
+                'ru_RU', // или 'uk_UA' если нужен украинский
                 \IntlDateFormatter::NONE,
                 \IntlDateFormatter::NONE,
                 $timezone, 
