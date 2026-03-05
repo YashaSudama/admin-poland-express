@@ -120,8 +120,6 @@ class Configurations
             self::$userRole = $_SESSION['user_role'];
         }
 
-        if ($_SERVER['REQUEST_URI'] === '/autorisation.php') $hideHeader = 'd-none';
-
         self::connectDotENV(); ?>
         
         <!DOCTYPE html>
@@ -136,44 +134,49 @@ class Configurations
                 </head>
                 <body>
                     <div class="container m-auto">
-                        <header class="d-flex <?= $hideHeader; ?>">
-                            <div class="logo">
-                                <?php if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/assets/img/logo/poland-express-logo-mobile.webp') &&
-                                          file_exists($_SERVER['DOCUMENT_ROOT'] . '/assets/img/logo/poland-express-logo-desctop.webp')): ?>
-                                    <a class="logo-mobile" href="/">
-                                        <img src="/assets/img/logo/poland-express-logo-mobile.webp" alt="<?= $_ENV['SITE_TITLE']; ?>">
-                                    </a>
-                                    <a class="logo-desctop" href="/">
-                                        <img src="/assets/img/logo/poland-express-logo-desctop.webp" alt="<?= $_ENV['SITE_TITLE']; ?>">
-                                    </a>
-                                <?php else: ?>
-                                    <span><?= $_ENV['SITE_TITLE']; ?></span>
-                                <?php endif; ?>
-                            </div>
-                            <div class="menu">
-                                <nav>
-                                    <ul class="d-flex">
 
-                                        <?php $menu = self::getMenu();
-                                        
-                                        foreach ($menu as $key => $value) : 
+                        <?php if ($_SERVER['REQUEST_URI'] !== '/autorisation.php') : ?>
+
+                            <header class="d-flex <?= $hideHeader; ?>">
+                                <div class="logo">
+                                    <?php if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/assets/img/logo/poland-express-logo-mobile.webp') &&
+                                            file_exists($_SERVER['DOCUMENT_ROOT'] . '/assets/img/logo/poland-express-logo-desctop.webp')): ?>
+                                        <a class="logo-mobile" href="/">
+                                            <img src="/assets/img/logo/poland-express-logo-mobile.webp" alt="<?= $_ENV['SITE_TITLE']; ?>">
+                                        </a>
+                                        <a class="logo-desctop" href="/">
+                                            <img src="/assets/img/logo/poland-express-logo-desctop.webp" alt="<?= $_ENV['SITE_TITLE']; ?>">
+                                        </a>
+                                    <?php else: ?>
+                                        <span><?= $_ENV['SITE_TITLE']; ?></span>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="menu">
+                                    <nav>
+                                        <ul class="d-flex">
+
+                                            <?php $menu = self::getMenu();
                                             
-                                            if (($key === 'users' || $key === 'mailing') && self::$userRole !== 'super-admin') continue; ?>
+                                            foreach ($menu as $key => $value) : 
+                                                
+                                                if (($key === 'users' || $key === 'mailing') && self::$userRole !== 'super-admin') continue; ?>
 
-                                            <li>
-                                                <a href="<?= $value['link'];?>" title="<?= $value['name']; ?>">
-                                                    <span class="d-block text-center l-height-1-2 <?= $key;?>">
-                                                        <?= $value['icon']; ?>
-                                                    </span>
-                                                </a>
-                                            </li>
+                                                <li>
+                                                    <a href="<?= $value['link'];?>" title="<?= $value['name']; ?>">
+                                                        <span class="d-block text-center l-height-1-2 <?= $key;?>">
+                                                            <?= $value['icon']; ?>
+                                                        </span>
+                                                    </a>
+                                                </li>
 
-                                        <?php endforeach; ?>
-                                        
-                                    </ul>
-                                </nav>
-                            </div>
-                        </header>
+                                            <?php endforeach; ?>
+                                            
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </header>
+
+                        <?php endif; ?>
     <?php }
 
     public static function redirectOperators() {

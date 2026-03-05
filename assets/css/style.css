@@ -848,6 +848,7 @@ header,
 	pointer-events: none;
 }
 .autorisation-block {
+	max-width: 1000px;
 	top: 50%;
     transform: translateY(-50%);
     width: 92%;
